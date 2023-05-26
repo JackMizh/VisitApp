@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".core.presentation.MainActivity"
+    android:background="#F5F9FE">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_home_top_illustration"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="3dp"
+        android:layout_marginTop="-30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu"
+        android:textSize="17sp"
+        android:layout_marginStart="10dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_refresh"
+        app:layout_constraintBottom_toBottomOf="@id/img_refresh"
+        android:elevation="3dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_refresh"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_refresh"
+        android:elevation="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_visit"
+        app:civ_border_width="4dp"
+        app:civ_border_color="#FFFFFF"
+        android:layout_marginBottom="-40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mitha_khairulnisa"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/tv_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/role"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+    <TextView
+        android:id="@+id/tv_nik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nik_md00001"
+        android:textSize="17sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_role" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_visit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_kunjunganBulan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kunjungan_pada_bulan_mei_2023"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_totalStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_actualStore"
+                app:layout_constraintTop_toBottomOf="@+id/tv_kunjunganBulan"
+                android:drawablePadding="6dp"
+                app:drawableStartCompat="@drawable/ic_totalstore" />
+
+            <TextView
+                android:id="@+id/tv_actualStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_kunjunganBulan"
+                android:drawablePadding="6dp"
+                app:drawableStartCompat="@drawable/ic_actualstore" />
+
+            <TextView
+                android:id="@+id/tv_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_actualStore"
+                app:layout_constraintTop_toBottomOf="@+id/tv_kunjunganBulan"
+                android:drawablePadding="6dp"
+                app:drawableStartCompat="@drawable/ic_percentage" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_nstore"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="25dp"
+                app:layout_constraintStart_toStartOf="@id/tv_totalStore"
+                app:layout_constraintEnd_toEndOf="@+id/tv_totalStore"
+                app:layout_constraintTop_toBottomOf="@+id/tv_totalStore"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/actual_nstore"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="25dp"
+                app:layout_constraintStart_toStartOf="@id/tv_actualStore"
+                app:layout_constraintEnd_toEndOf="@+id/tv_actualStore"
+                app:layout_constraintTop_toBottomOf="@+id/tv_actualStore"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/percentage"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="25dp"
+                app:layout_constraintStart_toStartOf="@id/tv_percentage"
+                app:layout_constraintEnd_toEndOf="@+id/tv_percentage"
+                app:layout_constraintTop_toBottomOf="@+id/tv_percentage"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FFA430"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/img_visit"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/img_visit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_imagevisit"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_kunjungan"
+            app:layout_constraintStart_toStartOf="@id/tv_kunjungan"
+            app:layout_constraintBottom_toTopOf="@id/tv_kunjungan"/>
+
+        <TextView
+            android:id="@+id/tv_kunjungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kunjungan"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/space"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_target"
+            tools:ignore="SmallSp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/img_target"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_target"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_target"
+            app:layout_constraintStart_toStartOf="@id/tv_target"
+            app:layout_constraintBottom_toTopOf="@id/tv_target"/>
+
+        <TextView
+            android:id="@+id/tv_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/target_install_ncdfdpc"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/space"
+            app:layout_constraintEnd_toStartOf="@+id/tv_dashboard"
+            app:layout_constraintStart_toEndOf="@+id/tv_kunjungan"
+            tools:ignore="SmallSp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/img_dashboard"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_dashboard"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_dashboard"
+            app:layout_constraintStart_toStartOf="@id/tv_dashboard"
+            app:layout_constraintBottom_toTopOf="@id/tv_dashboard"/>
+
+        <TextView
+            android:id="@+id/tv_dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/space"
+            app:layout_constraintEnd_toStartOf="@+id/tv_transmission"
+            app:layout_constraintStart_toEndOf="@+id/tv_target"
+            tools:ignore="SmallSp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/img_transmission"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_transmission"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_transmission"
+            app:layout_constraintStart_toStartOf="@id/tv_transmission"
+            app:layout_constraintBottom_toTopOf="@id/tv_transmission"/>
+
+        <TextView
+            android:id="@+id/tv_transmission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transmission_nhistory"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_dashboard"
+            app:layout_constraintBottom_toTopOf="@id/space"
+            tools:ignore="SmallSp" />
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/img_logout"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/img_logout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_logout"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="@id/tv_logout"
+            app:layout_constraintEnd_toEndOf="@id/tv_logout"
+            app:layout_constraintBottom_toTopOf="@+id/tv_logout"/>
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
