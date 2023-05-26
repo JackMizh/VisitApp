@@ -113,7 +113,7 @@ class StoredetailActivity : AppCompatActivity() {
                         val geocoder = Geocoder(this@StoredetailActivity, Locale.getDefault())
                         val list: List<Address> =
                             geocoder.getFromLocation(location.latitude, location.longitude, 1)!!
-                        if(CalculationByDistance(LatLng(-6.3099425, 106.9485818), LatLng(store.latitude.toDouble(), store.longitude.toDouble()))){
+                        if(CalculationByDistance(LatLng(list[0].latitude, list[0].longitude), LatLng(store.latitude.toDouble(), store.longitude.toDouble()))){
                             imgLocation.setColorFilter(Color.parseColor("#3BE51E"), android.graphics.PorterDuff.Mode.SRC_IN)
                             tvLocationInformation.text = "Lokasi Sudah Sesuai"
                             tvLocationInformation.setTextColor(Color.parseColor("#3BE51E"))
