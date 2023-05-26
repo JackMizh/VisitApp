@@ -6,11 +6,6 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import app.submission.visitapp.login.dao.RoomDao
 import app.submission.visitapp.login.models.Stores
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
 
 @Database(entities = [Stores::class], version = 1)

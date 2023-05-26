@@ -29,7 +29,8 @@
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"/>
+                android:layout_marginStart="20dp"
+                tools:ignore="RelativeOverlap" />
 
             <TextView
                 android:id="@+id/tv_user"
@@ -118,7 +119,7 @@
                 android:id="@+id/tv_storeCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SA123123"
+                android:text="@string/sa123123"
                 android:textSize="13sp"
                 android:textColor="@color/white"
                 android:layout_marginTop="8dp"
@@ -130,7 +131,7 @@
                 android:id="@+id/tv_storeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Indomaret Aplafsa"
+                android:text="@string/indomaret_aplafsa"
                 android:textSize="16sp"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/white"
@@ -141,7 +142,7 @@
                 android:id="@+id/tv_storeCluster"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cluster : Small"
+                android:text="@string/cluster_small"
                 android:textSize="16sp"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/white"
@@ -152,7 +153,7 @@
                 android:id="@+id/tv_storeRange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TT Regular - ERTM Big - Pareto"
+                android:text="@string/tt_regular_ertm_big_pareto"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="10dp"

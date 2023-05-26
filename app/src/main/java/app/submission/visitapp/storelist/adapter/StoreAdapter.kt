@@ -43,7 +43,8 @@ class StoreViewHolder(private val binding: ItemStoreBinding): RecyclerView.ViewH
             val current = Location("Current")
             current.latitude = currentLoc.latitude
             current.longitude = currentLoc.longitude
-            tvStoreRemaining.text = CalculationByDistance(LatLng(markerLoc.latitude, markerLoc.longitude), LatLng(currentLoc.latitude, currentLoc.longitude)).toString()
+            tvStoreRemaining.text =
+                CalculationByDistance(LatLng(markerLoc.latitude, markerLoc.longitude), LatLng(currentLoc.latitude, currentLoc.longitude))
 
             for(i in visitList){
                 if(i.store_id == stores.id){

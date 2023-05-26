@@ -1,8 +1,6 @@
 package app.submission.visitapp.storedetail.di
 
 import android.app.Application
-import app.submission.visitapp.login.dao.RoomDao
-import app.submission.visitapp.login.database.StoreDatabase
 import app.submission.visitapp.storedetail.dao.VisitDao
 import app.submission.visitapp.storedetail.database.VisitDatabase
 import dagger.Module

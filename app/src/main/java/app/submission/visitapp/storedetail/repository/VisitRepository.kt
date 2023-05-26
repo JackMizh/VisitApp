@@ -1,7 +1,5 @@
 package app.submission.visitapp.storedetail.repository
 
-import app.submission.visitapp.login.dao.RoomDao
-import app.submission.visitapp.login.models.Stores
 import app.submission.visitapp.storedetail.dao.VisitDao
 import app.submission.visitapp.storedetail.models.Visit
 import javax.inject.Inject

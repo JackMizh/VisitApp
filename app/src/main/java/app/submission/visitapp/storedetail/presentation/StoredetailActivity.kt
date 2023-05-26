@@ -27,17 +27,11 @@ import app.submission.visitapp.R
 import app.submission.visitapp.databinding.ActivityStoredetailBinding
 import app.submission.visitapp.done.presentation.DoneActivity
 import app.submission.visitapp.login.models.Stores
-import app.submission.visitapp.login.presentation.LoginActivity
 import app.submission.visitapp.login.utils.Tools
 import app.submission.visitapp.login.utils.alertDialog
 import app.submission.visitapp.storedetail.models.Visit
-import app.submission.visitapp.storelist.adapter.StoreAdapter
-import app.submission.visitapp.storelist.presentation.StorelistViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -193,7 +187,7 @@ class StoredetailActivity : AppCompatActivity() {
     var cameraActivityResultLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()){
         result: ActivityResult ->
-        if (result.resultCode === RESULT_OK) {
+        if (result.resultCode == RESULT_OK) {
             val inputImage = uriToBitmap(image_uri!!)
             with(binding){
                 imgVisit.setImageBitmap(inputImage)

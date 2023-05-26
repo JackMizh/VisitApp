@@ -51,4 +51,18 @@
     <string name="information_n">Information\n</string>
     <string name="dashboard_store">Dashboard Store</string>
     <string name="selesai">Selesai</string>
+    <string name="sa123123">SA123123</string>
+    <string name="indomaret_aplafsa">Indomaret Aplafsa</string>
+    <string name="cluster_small">Cluster : Small</string>
+    <string name="tt_regular_ertm_big_pareto">TT Regular - ERTM Big - Pareto</string>
+    <string name="toko_b">Toko B</string>
+    <string name="jalan_pal_merah_n0_25_jakarta_barat">Jalan Pal Merah N0 25 Jakarta Barat</string>
+    <string name="_25_06_2023">25-06-2023</string>
+    <string name="osa">OSA</string>
+    <string name="september_2023">September 2023</string>
+    <string name="_100">100%</string>
+    <string name="target">Target</string>
+    <string name="_40">40</string>
+    <string name="pencapaian">Pencapaian</string>
+    <string name="_60">60</string>
 </resources>

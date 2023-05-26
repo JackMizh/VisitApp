@@ -15,7 +15,6 @@ import androidx.lifecycle.viewModelScope
 import app.submission.visitapp.R
 import app.submission.visitapp.databinding.ActivityStorelistBinding
 import app.submission.visitapp.login.utils.Tools
-import app.submission.visitapp.storedetail.presentation.StoredetailActivity
 import app.submission.visitapp.storedetail.presentation.StoredetailViewModel
 import app.submission.visitapp.storelist.adapter.StoreAdapter
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -69,7 +68,7 @@ class StorelistActivity : AppCompatActivity(), OnMapReadyCallback {
 
             val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
             val current = LocalDateTime.now().format(formatter)
-            tvTitleList.text = "List kunjungan ${current}"
+            tvTitleList.text = "List kunjungan $current"
 
             if(isPermissionGranted) {
                 fusedLocationClient =
@@ -115,7 +114,7 @@ class StorelistActivity : AppCompatActivity(), OnMapReadyCallback {
 
         fusedLocationClient.lastLocation.addOnCompleteListener {
             if(it.isSuccessful){
-                val location = it.result
+                it.result
                 mMap = p0
                 mMap!!.isMyLocationEnabled = true
                 mMap!!.uiSettings.isMyLocationButtonEnabled = true

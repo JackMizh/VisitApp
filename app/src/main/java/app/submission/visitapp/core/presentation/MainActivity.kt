@@ -7,9 +7,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.viewModelScope
 import app.submission.visitapp.R
-import app.submission.visitapp.databinding.ActivityLoginBinding
 import app.submission.visitapp.databinding.ActivityMainBinding
-import app.submission.visitapp.login.presentation.LoginViewModel
 import app.submission.visitapp.login.utils.Tools
 import app.submission.visitapp.storelist.presentation.StorelistActivity
 import dagger.hilt.android.AndroidEntryPoint
